@@ -36,7 +36,7 @@ app.post('/:userId/addNote', async (req, res) => {
     await setDoc(doc(db, 'Notes', docRef.id), {
         title: req.body.title,
         description: req.body.description,
-        uid: req.body.uid
+        uid: req.params.userId
     })
     res.json({ message: 'Note added' })
 })
