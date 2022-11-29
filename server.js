@@ -1,9 +1,11 @@
 import express from 'express';
 import { db } from './firebaseconfig.js';
-import { collection, query, doc, getDocs, setDoc, deleteDoc } from 'firebase/firestore';
+import { collection, query, doc, getDocs, setDoc, deleteDoc } from 'firebase/firestore'; \
+import cors from 'cors'
 const app = express()
 
 app.use(express.json())
+app.use(cors())
 
 
 
