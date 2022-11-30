@@ -20,7 +20,7 @@ app.get(`/:userId/allNotes`, async (req, res) => {
 
         if (document.data().uid == req.params.userId) {
             notes.push({
-                noteId: docRef.id,
+                noteId: document.data().noteId,
                 description: document.data().description,
                 title: document.data().title,
                 uid: document.data().uid
