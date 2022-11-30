@@ -36,7 +36,7 @@ app.post('/:userId/addNote', async (req, res) => {
     console.log(req.body)
     const docRef = doc(collection(db, 'Notes'))
     await setDoc(doc(db, 'Notes', docRef.id), {
-        id: docRef.id,
+        noteId: docRef.id,
         title: req.body.title,
         description: req.body.description,
         uid: req.params.userId
