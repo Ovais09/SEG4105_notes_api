@@ -59,7 +59,8 @@ app.put('/:userId/updateNote/:noteId', async (req, res) => {
     await setDoc(doc(db, "Notes", req.params.noteId), {
         title: req.body.title,
         description: req.body.description,
-        uid: req.params.userId
+        uid: req.params.userId,
+        noteId: req.params.noteId
     })
     res.json({message: "Note updated"})
 })
